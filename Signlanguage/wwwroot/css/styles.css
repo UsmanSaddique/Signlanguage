@@ -1,0 +1,88 @@
+body{
+	background-color: #A6E3E9;
+}
+.div1{
+	background-color: #CBF1F5;
+	text-align: center;
+}
+.span1{
+	font-family: Comic Sans MS;
+	font-size: 45px;
+
+}
+.span2{
+	font-family: Comic Sans MS;
+	font-size: 22px;
+}
+.contrn{
+	margin-left: 520px;
+}
+.contactBTN{
+	float:left;
+	background-color:#47525E;
+	border-radius: 3px;
+}
+.cancelBTN{
+	border:2px solid black; 
+	border-color:#485460; 
+	 
+}
+.cancelBTN:hover {
+	background-color: #A9A9A9; 
+	border-color: #A9A9A9;
+}
+.cancelBTN2{
+	border:2px solid black;
+    border-color:#485460; 
+	color: black;
+}
+.cancelBTN2:hover {
+	background-color: #3CB371;
+	border-color: #3CB371;
+}
+
+
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btnn {
+  border: 2px solid gray;
+  color: gray;
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: ;
+  font-weight: bold;
+      	height:120px;
+        width:300px;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+/*Home page decoration*/
+
+.homePgBTN{
+	border:2px solid black; 
+	border-color:#485460; 
+	 
+}
+.homePgBTN:hover {
+	background-color: #D6EAF8; 
+	border-color: #D6EAF8;
+}
+table, th, td {
+  border: 1px #485460;
+  border-collapse: collapse;
+}
+
+

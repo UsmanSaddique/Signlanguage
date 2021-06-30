@@ -1,0 +1,78 @@
+﻿@{
+    ViewData["Title"] = "Text Summarization";
+}
+
+<div class="div1">
+    <span class="span1">Pakistan Sign  Language</span><br>
+    <span class="span2">"Signs are to eyes what words are to ears"</span><br><br>
+</div>
+<nav class="navbar navbar-expand-sm navbar-light" style="background-color: #71C9CE; color: white;">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="#">
+        <img src="img\logo.png" alt="logo" style="width:40px;">
+    </a>
+
+    <!-- Links -->
+    <ul class="navbar-nav ">
+        <li class="nav-item">
+            <a class="nav-link text-white"asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Sign Language Translator</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white"asp-area="" asp-controller="Home" asp-action="Index" >Text to Avatar</a>
+        </li>
+        <li class="nav-item contactBTN contrn">
+            <a class="nav-link text-white " asp-area="" asp-controller="Home" asp-action="Index">Contact us</a>
+        </li>
+    </ul>
+</nav>
+<div class="container-fluid">
+    <br>
+
+    <center><h3>Text Summarization</h3></center><br><br>
+
+    <h3 style="margin-left: 210px;">Summary</h3>
+    <textarea id="message" name="message" rows="13" cols="70" placeholder="Type your message here..." style="height: 230px; width: 350px; border-radius: 5px; background-color: #E3FDFD; border:1px solid #485460; margin-left: 110px;"></textarea>
+    <dir style="margin-left: 380px;">
+        <button type="button" onclick="TextSummarize()" class="btn btn-link cancelBTN2" style="text-decoration: none; color: black;  width: 150px; margin-left: -110px;">Translate</button>
+    </dir>
+    <div style="margin-left: 600px; margin-top: -350px;">
+        <h3>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  PSL Sentence</h3>
+        <input type="display" id="display" name="display" disabled="" style="height: 230px; width: 350px; border-radius: 5px; background-color: #E3FDFD; border:1px solid #485460;"><br><br>
+        <a href="C:\xampp\htdocs\Sign language project\textToAvatar.html">
+            <button type="button" class="btn btn-link cancelBTN" style="text-decoration: none; color: black; float: right; background-color: lightblue; margin-right: 100px;">Display Avatar</button>
+        </a>
+    </div>
+
+
+    <br>
+
+
+
+    <br>
+
+</div>
+
+
+<script>
+    function TextSummarize() {
+        var text = $("#message").val();
+        $.ajax({
+            url: '/Home/ConvertValue',
+            type: 'POST',
+            method: 'POST',
+            data: { value: text },
+            success: function (response) {
+              
+                $("#display").val(response);
+            },
+            fail: function (response) {
+                // console.log('message from fail...', response.responseText);
+            }
+        });
+       }
+    
+
+</script>
