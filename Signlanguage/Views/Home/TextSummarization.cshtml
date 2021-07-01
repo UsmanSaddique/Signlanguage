@@ -45,6 +45,7 @@
             <button type="button" class="btn btn-link cancelBTN" style="text-decoration: none; color: black; float: right; background-color: lightblue; margin-right: 100px;">Display Avatar</button>
         </a>
     </div>
+    <div></div>
 
 
     <br>
@@ -74,5 +75,18 @@
         });
        }
     
+
+</script>
+<script>
+    $(document).ready(function () {
+
+        var values =   @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.ListString));
+        debugger;
+         var text = '';
+        for (var i = 0; i < values.Concepts.length; i++) {
+            text = text + values.Concepts[i] + ' ';
+        }
+        $("#message").val(text);
+    });
 
 </script>

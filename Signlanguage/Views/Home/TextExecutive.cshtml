@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "Text Summarization";
+}
+
+<div class="div1">
+    <span class="span1">Pakistan Sign  Language</span><br>
+    <span class="span2">"Signs are to eyes what words are to ears"</span><br><br>
+</div>
+<nav class="navbar navbar-expand-sm navbar-light" style="background-color: #71C9CE; color: white;">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="#">
+        <img src="img\logo.png" alt="logo" style="width:40px;">
+    </a>
+
+    <!-- Links -->
+    <ul class="navbar-nav ">
+        <li class="nav-item">
+            <a class="nav-link text-white" href="D:\University\Semester_8\FYP_2\Sign language project\home.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="D:\University\Semester_8\FYP_2\Sign language project\translator.html">Sign Language Translator</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="D:\University\Semester_8\FYP_2\Sign language project\textToAvatar.html">Text to Avatar</a>
+        </li>
+        <li class="nav-item contactBTN contrn">
+            <a class="nav-link text-white " href="D:\University\Semester_8\FYP_2\Sign language project\contactUs.html">Contact us</a>
+        </li>
+    </ul>
+</nav>
+<div class="container-fluid">
+    <br>
+    <form id="CustomerForm" class="form-horizontal" asp-controller="Home" asp-action="TextSummarization" enctype="multipart/form-data"  >
+        <center><h3>Text Summarization</h3></center><br><br><br><br>
+        <center>
+            <h4 style="color: #485460;">
+                Upload a file
+                <img src="img\upload.png" alt="logo" style="width:50px;">
+            </h4>
+
+
+            <center>
+
+                <div class="upload-btn-wrapper">
+                    <button class="btnn">Upload your file here</button>
+                    <input id="myfile" type="file" name="img" />
+
+                </div>
+            </center>
+
+
+            <br><br>
+            <a   class="btn btn-link cancelBTN" style="text-decoration: none; color: black;">Cancel</a> &nbsp;&nbsp;
+           
+                <input type="submit" class="btn btn-link cancelBTN2" asp-action="TextSummarization" asp-controller="Home" style="text-decoration: none; color: black;" value="Generate Summary"/>
+          
+        </center>
+
+
+        <br>
+</form>
+</div>
